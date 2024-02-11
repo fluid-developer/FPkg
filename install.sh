@@ -1,9 +1,9 @@
 echo "moving FPkg's redirect script to /bin/bash to avoid issues"
-sudo mv FPkg /usr/bin
+sudo mv FPkg /usr/bin && sudo chmod a+x /usr/bin/FPkg
 
 # garabge code goes here
 mkdir ~/.FPkg
-cd FPkg
+cd .FPkg
 mkdir ~/.FPkg/pkgs
 mv bashrc-loader.sh ~/.FPkg/bashrc-loader.rc
 mv shell.sh ~/.FPkg/shell.sh
