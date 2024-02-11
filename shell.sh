@@ -12,4 +12,4 @@ fi
 
 read -p "$ir:" command
 $command
-bash /home/fluid/des-short/.programs/FPkg/shell.sh
+bash ~/.FPkg/shell.sh
