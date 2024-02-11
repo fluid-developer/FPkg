@@ -2,7 +2,7 @@ debugging=false
 
 read -p "FPkg:" pkg
 read -p "Args:" args
-bash /home/fluid/des-short/.programs/FPkg/pkgs/$pkg.sh $args
+bash ~/.FPkg/pkgs/$pkg.sh $args
 
 if [[ $debugging == true ]]
 then
