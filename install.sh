@@ -1,5 +1,6 @@
 echo "moving FPkg's redirect script to /bin/bash to avoid issues"
 sudo mv FPkg /usr/bin && sudo chmod a+x /usr/bin/FPkg
+FPkg_old_dir=$(pwd)
 
 # garabge code goes here
 mkdir ~/.FPkg
@@ -13,6 +14,5 @@ echo "check documentation on GitHub in order to create package registry"
 echo "you can also add some lines to ~/.bashrc to run custom shell and display title"
 echo "now you can use FPkg in your favourite terminal"
 
-FPkg_old_dir=$(pwd)
 cd ..
 rm -rf FPkg_old_dir
