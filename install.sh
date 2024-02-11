@@ -6,7 +6,7 @@ FPkg_old_dir=$(pwd)
 mkdir ~/.FPkg
 cd .FPkg
 mkdir ~/.FPkg/pkgs
-mv bashrc-loader.sh ~/.FPkg/bashrc-loader.rc
+mv bashrc-loader.sh ~/.FPkg/bashrc-loader.sh
 mv shell.sh ~/.FPkg/shell.sh
 mv title.sh ~/.FPkg/title.sh
 echo "root directory: .FPkg"
