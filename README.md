@@ -1,3 +1,5 @@
+![Img](https://raw.githubusercontent.com/fluid-developer/fluid-developer.github.io/main/logos/FPkg-logo.png)
+
 # FPkg
 FPkg in semi-universal package manager which aims to manager applications which cannot run by just inputting their name in cli
 
