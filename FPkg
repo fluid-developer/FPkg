@@ -1,2 +1,0 @@
- # Redirect script by FluidOff, as well as FPkg itself
-bash ~/.FPkg/bashrc-loader.sh $@
