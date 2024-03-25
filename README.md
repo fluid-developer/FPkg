@@ -1,30 +1,52 @@
 ![Img](https://raw.githubusercontent.com/fluid-developer/fluid-developer.github.io/main/logos/FPkg-logo.png)
 
 # FPkg
-FPkg in semi-universal package manager which aims to manager applications which cannot run by just inputting their name in cli
+Package Manager (Also Shell provider)
 
-# Notes
-designed for Arch linux
+# Table of content
+UNDONE RIGHT NOW
 
 # Installation
-clone this repo
-execute install.sh
+Depends on Release, check [Latest Releases](https://github.com/fluid-developer/FPkg/releases/latest)
 
-# making package registry
-go to ~/.FPkg/pkgs<br>
-add new file which matches this format: PROGRAM_NAME.sh where PROGRAM_NAME is name of program you want to add for FPkg<br>
-use this example with hello.sh<br>
+# Adding applications to FPkg
+```bash
+cd ~/.FPkg/packages
+```
+Add a new file, which will be your startup command
 
+Here is an example of `hello` program
 ```bash
 # Testing purposes
-echo "Hello, World! This is FPkg"
+echo "Hello, World! This is FPkg!"
 
 ```
-
 (please leave a line after file ends)<br>
 <br>
-FIrst line is always a comment, it display what app shall do (optional tho)<br>
-the second line shall be a VALID command which will execute your program<br>
-<br>
-now you can try running `FPkg' and then input parameters for your app<br>
-if you want you can create a ~/.FPkg/apps directory to store them in one place<br>
+As you can see, the first line is invoking a comment, it is optional and not required to operate.<br>
+After that line you see actual command to invoke program, I recommend you adding `applications` folder to store their data and binaries itself.<br>
+
+# Using FSh
+`FSh` (Dont misread as `fish`) is an plug-in for FPkg. It allows you to:
+- Add aliases, configs without resetting shell (just press `<enter>` after `.fshrc` file was updated)
+- Using `FPkg` without touching your `.rc` file.
+- Adding a Banner without touching your `.rc` file.
+
+# Making FPkg's files auto-start
+Open your `.rc` file and add this line:
+```bash
+alias FPkg="$(cat shell.var) ~/.FPkg/FPkg" # To add FPkg as executable
+$(cat shell.var) ~/.FPkg/banner # To load banner
+$(cat shell.var) ~/.FPkg/FSh # To open FSh
+```
+Please, add these lines in correct order, otherwise it wont work properly.<br>
+Please note that adding these lines to `.fshrc` wont work.
+
+# FSh and FPkg Commands
+```md
+WARNING! NEVER, TRY TO CLEAR YOUR HISTORY FILE YOURSELVES.
+```
+`clear-shell-history` (Fsh) - Clears your `shell-hist` file.<br>
+`fshistory` (FSh) - Opens `gum` selection screen where you can select previous commands.<br>
+`fphistory clear` (FPkg) - Clears your `history` file.<br>
+`fphistory` (FPkg) - Opens `gum` selection screen where you can select previous applications.<br>
