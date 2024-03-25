@@ -29,10 +29,10 @@ then
 	if [[ $2 == "clear" ]]
 	then
 		echo "Clearing history..."
-		rm -rf history
-		touch history
+		rm -rf ~/.FPkg/history
+		touch ~/.FPkg/history
 		echo "Adding cancel option..."
-		echo "Cancel" &>> history
+		echo "Cancel" &>> ~/.FPkg/history
 		comp=y
 	fi
 fi
