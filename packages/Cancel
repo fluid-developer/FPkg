@@ -1,0 +1,3 @@
+# Cancel option
+echo "Cancelling..."
+exit 0

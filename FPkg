@@ -1,0 +1,51 @@
+#!/bin/bash
+workedin=$(pwd)
+cd ~/.FPkg
+
+fpshell=$(cat ~/.FPkg/shell.var)
+if [[ $fpshell == "" ]]
+then
+	fpshell="bash"
+	echo "USING BASH SHELL, PLEASE EDIT ~/.FPkg/shell.var AND EDIT SHELL."
+fi
+
+
+
+if [[ $1 != "fphistory" ]]
+then
+	echo $@ &>> history
+	$fpshell ~/.FPkg/packages/$@
+	comp=y
+fi
+
+if [[ $1 == "fphistory" ]]
+then
+	if [[ $2 != "clear" ]]
+	then
+		$fpshell ~/.FPkg/packages/$(cat history | gum filter)
+		comp=y
+	fi
+
+	if [[ $2 == "clear" ]]
+	then
+		echo "Clearing history..."
+		rm -rf history
+		touch history
+		echo "Adding cancel option..."
+		echo "Cancel" &>> history
+		comp=y
+	fi
+fi
+
+if [[ $1 == "fsh" ]]
+then
+	$fpshell ~/.FPkg/FSh
+	comp=y
+fi
+
+if [[ $comp == "" ]]
+then
+	echo "FPkg: Wrong arguments / Code failure"
+fi
+
+cd $workedin

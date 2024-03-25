@@ -1,0 +1,8 @@
+#!/bin/bash
+fpshell=$(cat ~/.FPkg/shell.var)
+if [[ $fpshell == "" ]]
+then
+	echo "USING BASH SHELL, PLEASE EDIT ~/.FPkg/shell.var AND EDIT SHELL."
+	fpshell=bash
+fi
+$fpshell ~/.FPkg/shell

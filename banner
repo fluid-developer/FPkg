@@ -1,0 +1,47 @@
+style=3
+
+if [[ $style == 0 ]]
+then
+ echo 'FPkg was loaded successfully'
+fi
+
+if [[ $style == 1 ]]
+then
+echo
+echo
+echo '    ███████ ██████  ██   ██  ██████      ██   ██      █████  ██████   ██████ ██   ██'
+echo '    ██      ██   ██ ██  ██  ██            ██ ██      ██   ██ ██   ██ ██      ██   ██'
+echo '    █████   ██████  █████   ██   ███       ███       ███████ ██████  ██      ███████'
+echo '    ██      ██      ██  ██  ██    ██      ██ ██      ██   ██ ██   ██ ██      ██   ██'
+echo '    ██      ██      ██   ██  ██████      ██   ██     ██   ██ ██   ██  ██████ ██   ██'
+echo
+echo
+fi
+
+if [[ $style == 2 ]]
+then
+echo
+echo
+echo
+echo '      ▄██████ ██████▄                           ▄█████▄'
+echo '      ██      ██   ██                           ██   ██             ▄▄'
+echo '      █████   ██████▀ ██ ██  ▄████▄    ██  ██   ███████ ██▄██ ▄████ ██'
+echo '      ██      ██      ████   ██  ██      ██     ██   ██ ██▀   ██    ████▄'
+echo '      ██      ██      ██ ██  ▀█████    ██  ██   ██   ██ ██    ▀████ ██ ██'
+echo '                              ▄▄ ██'
+echo '      Version: V2.0 | RELEASE ▀███▀   Made with ♥ by fluid-developer'
+echo
+fi
+
+if [[ $style == 3 ]]
+then
+echo
+echo
+echo '         _____ ____ __'
+echo '         |   __| __ \  |--.---.'
+echo '         |   __|  __/    <| _ |'
+echo '         |_|   |_|  |__|__|__ |'
+echo '                          |___|'
+echo '   V2.0R | Made with ♥ by fluid-developer'
+echo
+fi

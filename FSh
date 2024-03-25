@@ -1,0 +1,31 @@
+#!/bin/bash
+
+$(cat shell.var) ~/.FPkg/.fshrc
+
+if [[ $(/bin/id -u) == 1000 ]]
+then
+	user=$
+elif [[ $(/bin/id -u) == 10264 ]]
+then
+	user=$
+elif [[ $(/bin/id -u) == 0 ]]
+then
+	user=#
+fi
+
+read -p "$user:" cmd
+
+if [[ $cmd == clear-shell-history ]]
+then
+		echo "Clearing history..."
+		rm -rf shell-hist
+		touch shell-hist
+		echo "Adding cancel option..."
+		echo "Cancel" &>> shell-hist
+		dontexec=y
+elif [[ $dontexec == "" ]]
+then
+echo $cmd &>> shell-hist
+$cmd
+fi
+$(cat shell.var) ~/.FPkg/FSh
