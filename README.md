@@ -39,9 +39,9 @@ After that line you see actual command to invoke program, I recommend you adding
 # Making FPkg's files auto-start
 Open your `.rc` file and add this line:
 ```bash
-alias FPkg="$(cat shell.var) ~/.FPkg/FPkg" # To add FPkg as executable
-$(cat shell.var) ~/.FPkg/banner # To load banner
-$(cat shell.var) ~/.FPkg/FSh # To open FSh
+alias FPkg="$(cat ~/.FPkg/shell.var) ~/.FPkg/FPkg" # To add FPkg as executable
+$(cat ~/.FPkg/shell.var) ~/.FPkg/banner # To load banner
+$(cat ~/.FPkg/shell.var) ~/.FPkg/FSh # To open FSh
 ```
 Please, add these lines in correct order, otherwise it wont work properly.<br>
 Please note that adding these lines to `.fshrc` wont work.
