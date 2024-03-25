@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$(cat shell.var) ~/.FPkg/.fshrc
+$(cat ~/.FPkg/shell.var) ~/.FPkg/.fshrc
 
 if [[ $(/bin/id -u) == 1000 ]]
 then
@@ -18,14 +18,14 @@ read -p "$user:" cmd
 if [[ $cmd == clear-shell-history ]]
 then
 		echo "Clearing history..."
-		rm -rf shell-hist
-		touch shell-hist
+		rm -rf ~/.FPkg/shell-hist
+		touch ~/.FPkg/shell-hist
 		echo "Adding cancel option..."
-		echo "Cancel" &>> shell-hist
+		echo "Cancel" &>> ~/.FPkg/shell-hist
 		dontexec=y
 elif [[ $dontexec == "" ]]
 then
-echo $cmd &>> shell-hist
+echo $cmd &>> ~/.FPkg/shell-hist
 $cmd
 fi
-$(cat shell.var) ~/.FPkg/FSh
+$(cat ~/.FPkg/shell.var) ~/.FPkg/FSh
