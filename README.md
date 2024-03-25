@@ -4,11 +4,11 @@
 Package Manager (Also Shell provider)
 
 # Table of content
-- [Installation](https://github.com/fluid-developer/FPkg/README.md#installation)
-- [Adding applications to FPkg](https://github.com/fluid-developer/FPkg/README.md#adding-applications-to-fpkg)
-- [Using FSh](https://github.com/fluid-developer/FPkg/README.md#using-fsh)
-- [Making FPkg's files auto-start](https://github.com/fluid-developer/FPkg/README.md#making-fpkgs-files-auto-start)
-- [FSh and FPkg commands](https://github.com/fluid-developer/FPkg/README.md#fsh-and-fpkg-commands)
+- [Installation](https://github.com/fluid-developer/FPkg?tab=readme-ov-file#installation)
+- [Adding applications to FPkg](https://github.com/fluid-developer/FPkg?tab=readme-ov-file#adding-applications-to-fpkg)
+- [Using FSh](https://github.com/fluid-developer/FPkg?tab=readme-ov-file#using-fsh)
+- [Making FPkg's files auto-start](https://github.com/fluid-developer/FPkg?tab=readme-ov-file#making-fpkgs-files-auto-start)
+- [FSh and FPkg commands](https://github.com/fluid-developer/FPkg?tab=readme-ov-file#fsh-and-fpkg-commands)
 
 # Installation
 Depends on Release, check [Latest Releases](https://github.com/fluid-developer/FPkg/releases/latest)
